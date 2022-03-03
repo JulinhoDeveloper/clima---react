@@ -32,9 +32,6 @@ useEffect(() => {
         guardarConsultar(false);
 
 
-
-        // Detecta si hubo resultados correctos en la consulta
-
         if(resultado.cod === "404") {
          guardarError(true);
         } else {
@@ -45,7 +42,7 @@ useEffect(() => {
   }
   consultarAPI();
  
-},[consultar]);
+},[consultar, cidade,pais]);
 
 let componente;
   if(error) {
